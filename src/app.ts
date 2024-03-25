@@ -6,7 +6,7 @@ interface IPokemon {
 }
 
 const container: HTMLElement = document.getElementById("app")!;
-const pokemons: number = 256
+const pokemons: number = 721
 
 const showPokemon = (pokemon: IPokemon): void => {
   let output: string = `

@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var container = document.getElementById("app");
-var pokemons = 256;
+var pokemons = 721;
 var showPokemon = function (pokemon) {
     var output = "\n        <div class=\"card\">\n            <span class=\"card--id\">#".concat(pokemon.id, "</span>\n            <img class=\"card--image\" src=").concat(pokemon.image, " alt=").concat(pokemon.name, " />\n            <h1 class=\"card--name\">").concat(pokemon.name, "</h1>\n            <span class=\"card--details\">").concat(pokemon.type, "</span>\n        </div>\n    ");
     container.innerHTML += output;
