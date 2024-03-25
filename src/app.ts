@@ -1,12 +1,12 @@
-const container: HTMLElement = document.getElementById("app")!;
-const pokemons: number = 1025;
-
 interface IPokemon {
   id: number;
   name: string;
   image: string;
   type: string;
 }
+
+const container: HTMLElement = document.getElementById("app")!;
+const pokemons: number = 256
 
 const showPokemon = (pokemon: IPokemon): void => {
   let output: string = `
@@ -37,9 +37,9 @@ const getPokemon = async (id: number): Promise<void> => {
   showPokemon(transformedPokemon);
 };
 
-const fetchData = (): void => {
+const fetchData = async (): Promise<void> => {
   for (let i = 1; i <= pokemons; i++) {
-    getPokemon(i);
+    await getPokemon(i);
   }
 };
 
